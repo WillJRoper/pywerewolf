@@ -7,6 +7,9 @@ License:
 Author: Will Roper (w.roper@sussex.ac.uk)
 """
 
+# Define constants
+role_order = ["Prostitue", "Bodyguard", "Seer", "Spellcaster", "Werewolf"]
+
 
 class Villager:
     """ A generic villager object containing universal methods and attributes
@@ -164,9 +167,9 @@ class Seer(Villager):
 
         # Invesitgate the player
         if isinstance(other, Werewolf):
-            print("%s IS a Werewolf!", % other.name)
+            print("%s IS a Werewolf!" % other.name)
         else:
-            print("%s IS NOT a Werewolf!", % other.name)
+            print("%s IS NOT a Werewolf!" % other.name)
 
     def __multiply__(self, other: type[Player]) -> None:
         """ The multiplication operator uses this class's ability on another.
